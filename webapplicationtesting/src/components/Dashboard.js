@@ -24,16 +24,29 @@ const Dashboard = (props) => {
             setBalls(balls + 1);
         }
     }
+
+    const foul = e => {
+        e.preventDefault();
+        if (strikes < 2){
+            setStrikes(strikes + 1);
+        }
+    }
+
+    const hit = e => {
+        e.preventDefault();
+        setStrikes(0);
+        setBalls(0);
+    }
     
 
     return(
         <div>
-            <div>I am the dashboard</div>
+            <h2>Dashboard</h2>
             <div>
                 <button onClick={incrementStrike}>Strike</button>
                 <button onClick={incrementBall}>Ball</button>
-                <button>Foul</button>
-                <button>Hit</button>
+                <button onClick={foul}>Foul</button>
+                <button onClick={hit}>Hit</button>
             </div>
         </div>
         

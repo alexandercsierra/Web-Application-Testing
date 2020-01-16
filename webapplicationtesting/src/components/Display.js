@@ -3,7 +3,7 @@ import React from 'react'
 const Display = (props) => {
     return(
         <div>
-            <div>I am the display</div>
+            <h2>Display</h2>
             <div>
                 <div>Balls: {props.balls}</div>
                 <div>Strikes: {props.strikes}</div>
