@@ -9,6 +9,10 @@ afterEach(cleanup);
 //   expect(linkElement).toBeInTheDocument();
 // });
 
+test('does app render', () => {
+  const app = render(<App/>);
+})
+
 test('does the strike button work', ()=>{
   // const App = render(<App/>);
   const container = render(<App/>);
@@ -62,19 +66,19 @@ test('does the foul button work', ()=>{
 
 })
 
-test('does the foul button work', ()=>{
+test('does the hit button work', ()=>{
   // const App = render(<App/>);
   const container = render(<App/>);
-  const button = container.getByTestId("foul");
+  const button = container.getByTestId("hit");
   const Text = container.getByTestId("strikeText");
   console.log(button);
   fireEvent.click(button);
 
-  expect(Text.textContent).toBe("Strikes: 1");
+  expect(Text.textContent).toBe("Strikes: 0");
   fireEvent.click(button);
-  expect(Text.textContent).toBe("Strikes: 2");
+  expect(Text.textContent).toBe("Strikes: 0");
   fireEvent.click(button);
-  expect(Text.textContent).toBe("Strikes: 2");
+  expect(Text.textContent).toBe("Strikes: 0");
 
 
 })
