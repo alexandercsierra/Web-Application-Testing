@@ -5,8 +5,8 @@ const Display = (props) => {
         <div>
             <h2>Display</h2>
             <div>
-                <div>Balls: {props.balls}</div>
-                <div>Strikes: {props.strikes}</div>
+                <div data-testid="ballText">Balls: {props.balls}</div>
+                <div data-testid="strikeText">Strikes: {props.strikes}</div>
             </div>
         </div>
         

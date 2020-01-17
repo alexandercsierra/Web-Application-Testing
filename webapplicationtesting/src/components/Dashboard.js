@@ -44,9 +44,9 @@ const Dashboard = (props) => {
         <div>
             <h2>Dashboard</h2>
             <div>
-                <button onClick={(e)=> incrementStrike(e, strikes, setStrikes, setBalls)}>Strike</button>
-                <button onClick={e=>incrementBall(e, balls, setStrikes, setBalls)}>Ball</button>
-                <button onClick={e => foul(e,strikes,setStrikes)}>Foul</button>
+                <button data-testid="strike" onClick={(e)=> incrementStrike(e, strikes, setStrikes, setBalls)}>Strike</button>
+                <button data-testid="ball" onClick={e=>incrementBall(e, balls, setStrikes, setBalls)}>Ball</button>
+                <button data-testid="foul" onClick={e => foul(e,strikes,setStrikes)}>Foul</button>
                 <button onClick={e=>hit(e,setStrikes,setBalls)}>Hit</button>
             </div>
         </div>
